@@ -20,7 +20,7 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
-
+/*Path a la que sera enviada cualquier petición distinta a las detalladas en el servidor"*/
 app.get('*', ( req, res ) => {
     res.sendFile( path.join( __dirname+'/public/index.html' ) );
 });
